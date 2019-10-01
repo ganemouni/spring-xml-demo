@@ -7,9 +7,26 @@
     <!-- bean definitions here -->
 
     <bean class="com.stackroute.domain.Actor" id="Actor1">
-        <property name="name" value="ganesh"/>
-        <property name="gender" value="male"/>
-        <property name="age" value="21"/>
+        <constructor-arg name="name" value="ganesh"/>
+        <constructor-arg name="gender" value="male"/>
+        <constructor-arg name="age" value="21"/>
+
+    </bean>
+    <bean class="com.stackroute.domain.Actor" id="Actor2">
+        <constructor-arg name="name" value="Sriram"/>
+        <constructor-arg name="gender" value="male"/>
+        <constructor-arg name="age" value="24"/>
+
+    </bean>
+    <bean class="com.stackroute.domain.Actor" id="Actor3">
+        <constructor-arg name="name" value="tejaswi"/>
+        <constructor-arg name="gender" value="female"/>
+        <constructor-arg name="age" value="19"/>
+
+    </bean>
+
+    <bean name="movieA,movieB" class="com.stackroute.domain.Movie" >
+        <constructor-arg name="actor" ref="Actor3"/>
 
     </bean>
 
