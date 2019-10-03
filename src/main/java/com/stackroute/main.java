@@ -11,19 +11,10 @@ import org.springframework.core.io.ClassPathResource;
 public class main {
     public static void main(String[] args){
     ApplicationContext context= new ClassPathXmlApplicationContext("bean.xml");
-//        BeanFactory factory= new XmlBeanFactory(new ClassPathResource("bean.xml"));
-
-    Movie m1=(Movie)context.getBean("movieA");
-        Movie m2=(Movie) context.getBean("movieB");
-    m1.display();
+//    Movie m1=(Movie)context.getBean("movieA");
+        Movie m2=(Movie)context.getBean("movieB");
+//    m1.display();
     m2.display();
-
-        if (m1 == m2) {
-            System.out.println(m1==m2);
-        }
-        else{
-            System.out.println("not equal");
-        }
     }
 
 }
